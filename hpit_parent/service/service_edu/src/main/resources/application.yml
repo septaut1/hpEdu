@@ -1,0 +1,27 @@
+# 服务端口
+server:
+  port: 8001
+
+spring:
+  # 服务名
+  application:
+    name: service_edu
+  # 环境设置：dev、test、prod
+  profiles:
+    active: dev
+
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  # mysql数据库连接
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/hp_edu?serverTimezone=GMT%2B8
+    username: root
+    password: root
+
+#mybatis日志
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
